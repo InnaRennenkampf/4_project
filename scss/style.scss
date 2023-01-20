@@ -15,6 +15,10 @@ $OpenSans600: "OpenSans600", sans-serif;
   margin: 25px auto;
 }
 
+@mixin uppercase{
+  text-transform: uppercase;
+}
+
 .container {
   width: 100%;
   max-width: 1172px;
@@ -123,7 +127,7 @@ $OpenSans600: "OpenSans600", sans-serif;
   font-size: 42px;
   line-height: 110%;
   color: white;
-  text-transform: uppercase;
+ @include uppercase;
 }
 
 .title-2 p {
@@ -140,7 +144,7 @@ $OpenSans600: "OpenSans600", sans-serif;
   display: inline-block;
   line-height: 29px;
   background-color: #FF9619;
-  text-transform: uppercase;
+  @include uppercase;
   font-size: 16px;
   line-height: 150%;
   color: #FFFFFF;
@@ -153,7 +157,7 @@ $OpenSans600: "OpenSans600", sans-serif;
 
 .title-1 h3::first-letter {
   color: #FF9619;
-  text-transform: uppercase;
+  @include uppercase;
 }
 
 .novelties {
@@ -165,6 +169,60 @@ $OpenSans600: "OpenSans600", sans-serif;
 
 .novelties::first-letter {
   color: #FF9619;
+}
+
+.name {
+  font-family: $Raleway400;
+  @include uppercase;
+  margin: 15px auto 5px;
+  font-size: 18px;
+line-height: 22px;
+text-align: center;
+}
+
+.slide-container {
+  margin-bottom: 60px;
+}
+
+.price {
+  font-family: $OpenSans400;
+  font-size: 18px;
+  line-height: 25px;
+  color: #FF9619;
+  text-align: center;
+  @include uppercase;
+  margin-bottom: 0;
+}
+
+.slide-container {
+  max-width: 970px;
+  width: 100%;
+  background-color: #343434;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.slide-content {
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
+.image-content,
+.card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image {
+  position: relative;
+  width: 270px;
+height: 278px;
+}
+
+.card-image, .card-img {
+height: 100%;
+width: 100%;
+object-fit: cover;
 }
 
 @font-face {
