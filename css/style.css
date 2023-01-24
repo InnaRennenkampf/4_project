@@ -163,10 +163,6 @@ body {
   text-align: center;
 }
 
-.slide-container {
-  margin-bottom: 60px;
-}
-
 .price {
   font-family: "OpenSans400", sans-serif;
   font-size: 18px;
@@ -180,36 +176,9 @@ body {
 .slide-container {
   max-width: 970px;
   width: 100%;
-  background-color: #343434;
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-.slide-content {
-  margin-left: 35px;
-  margin-right: 35px;
-}
-
-.image-content,
-.card-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.card-image {
-  position: relative;
-  width: 270px;
-  height: 278px;
 }
 
 .card-image, .card-img {
-  height: 100%;
-  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -245,4 +214,15 @@ body {
 @font-face {
   font-family: "OpenSans600";
   src: url("../fonts/OpenSans/OpenSans-SemiBold.ttf") format("truetype");
+}
+.swiper-button-prev, .swiper-button-next {
+  position: static !important;
+  margin-top: 0px !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.swiper {
+  margin: 0 !important;
 }

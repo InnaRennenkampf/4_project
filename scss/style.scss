@@ -181,7 +181,7 @@ text-align: center;
 }
 
 .slide-container {
-  margin-bottom: 60px;
+  // margin-bottom: 60px;
 }
 
 .price {
@@ -197,32 +197,42 @@ text-align: center;
 .slide-container {
   max-width: 970px;
   width: 100%;
-  background-color: #343434;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  // padding-top: 30px;
+  // padding-bottom: 30px;
 }
 
 .slide-content {
-  margin-left: 35px;
-  margin-right: 35px;
+  // margin-left: 45px;
+  // margin-right: 35px;
 }
 
 .image-content,
 .card-content {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
+}
+
+.image-content {
+  // margin-left: 50px;
+  // margin: 30px;
+}
+
+.cardd {
+  // margin: 0;
 }
 
 .card-image {
-  position: relative;
-  width: 270px;
-height: 278px;
+  // position: relative;
+  // width: 270px;
+  // height: 278px;
 }
 
 .card-image, .card-img {
-height: 100%;
-width: 100%;
 object-fit: cover;
+}
+
+.swiper-slide {
+
 }
 
 @font-face {
@@ -263,4 +273,21 @@ object-fit: cover;
 @font-face {
   font-family: "OpenSans600";
   src: url('../fonts/OpenSans/OpenSans-SemiBold.ttf') format("truetype");
+}
+
+.swiper-button-prev, .swiper-button-next {
+  position: static !important;
+  margin-top: 0px !important;
+  display: flex !important;
+
+}
+
+.swiper {
+  margin: 0 !important;
+}
+
+.swiper-container {
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
 }
