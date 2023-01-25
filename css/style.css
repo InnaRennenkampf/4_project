@@ -120,7 +120,8 @@ body {
   color: #FFFFFF;
 }
 
-.btn-orange-grey {
+.btn-orange-grey,
+.btn-orange {
   font-family: "Raleway700", sans-serif;
   text-decoration: none;
   padding: 13px 22px;
@@ -131,6 +132,10 @@ body {
   font-size: 16px;
   line-height: 150%;
   color: #FFFFFF;
+}
+
+.btn-orange:hover {
+  color: white;
 }
 
 .btn-orange-grey:hover {
@@ -225,7 +230,7 @@ a {
 }
 
 .btn-rotator {
-  margin-bottom: 195px;
+  margin-bottom: 150px;
   margin-top: 30px;
 }
 
@@ -241,7 +246,6 @@ a {
 
 .overlay-blue img {
   display: inline;
-  position: absolute;
   margin-top: 30px;
 }
 
@@ -261,8 +265,10 @@ a {
   background: #FF9619;
   width: 149px;
   height: 110px;
-  right: 100px;
-  top: 1805px;
+  position: relative;
+  margin-right: 86px;
+  bottom: -75px;
+  z-index: 1;
 }
 
 .overlay-orange-top p {
@@ -277,10 +283,11 @@ a {
   content: " ";
   position: absolute;
   background: #FF9619;
+  position: static;
   width: 200px;
   height: 90px;
-  top: 2230px;
-  left: 230px;
+  margin-top: 395px;
+  margin-left: 237px;
 }
 
 .individual-furniture-block {
@@ -295,6 +302,26 @@ a {
   line-height: 110%;
   margin-bottom: 30px;
   color: white;
+}
+
+.title-3 p {
+  font-family: "Raleway500", sans-serif;
+  font-size: 20px;
+  line-height: 125%;
+  letter-spacing: 0.1em;
+  color: #FFFFFF !important;
+}
+
+.title-4 p {
+  font-family: "Raleway300", sans-serif;
+  font-size: 18px;
+  line-height: 135%;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+}
+
+.individual-furniture {
+  margin: 130px auto 160px;
 }
 
 @font-face {
