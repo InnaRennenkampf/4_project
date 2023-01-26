@@ -156,7 +156,8 @@ body {
 }
 
 .novelties::first-letter,
-.individual-furniture-block h4::first-letter {
+.individual-furniture-block h4::first-letter,
+.history-title h4::first-letter {
   color: #FF9619;
 }
 
@@ -322,6 +323,13 @@ a {
 
 .individual-furniture {
   margin: 130px auto 160px;
+}
+
+.history-title h4 {
+  font-family: "Raleway700", sans-serif;
+  font-size: 35px;
+  line-height: 110%;
+  margin-bottom: 14px;
 }
 
 @font-face {

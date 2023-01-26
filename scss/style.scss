@@ -177,7 +177,8 @@ $OpenSans600: "OpenSans600", sans-serif;
 }
 
 .novelties::first-letter,
-.individual-furniture-block h4::first-letter {
+.individual-furniture-block h4::first-letter,
+.history-title h4::first-letter {
   color: #FF9619;
 }
 
@@ -334,6 +335,11 @@ a {
 
 .individual-furniture {
   margin: 130px auto 160px;
+}
+
+.history-title h4 {
+  @include h4;
+  margin-bottom: 14px;
 }
 
 @font-face {
