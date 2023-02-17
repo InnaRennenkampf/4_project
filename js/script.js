@@ -1,4 +1,3 @@
-// прокрутка карусели
 var swiper = new Swiper(".slide-content", {
   slidesPerView: 3,
   spaceBetween: 80,
@@ -15,63 +14,55 @@ var swiper = new Swiper(".slide-content", {
   },
 });
 
-//валидация формы
 function validateForm(form) {
-
-  function removeError(input) { // создаем функцию, которая будет удалять ошибку
-    const parent = input.parentNode;
-    if (parent.classList.contains('error')) {
-      parent.classList.remove('error');
-      parent.querySelector('.error-label').remove();
+  function removeError(input) {
+    const parent = $(input).parent();
+    if (parent.hasClass('error')) {
+      parent.removeClass('error');
+      parent.find('.error-label').remove();
     }
   }
 
-  function createError(input, text) { // создаем функцию, которая будет создавать ошибку
-    const parent = input.parentNode;
-    const errorLabel = document.createElement('label')
-    errorLabel.classList.add('error-label')
-
-    errorLabel.innerHTML = text;
-
-    parent.appendChild(errorLabel);
-    parent.classList.add('error'); // добавляем класс error
+  function createError(input, text) {
+    const parent = $(input).parent();
+    const errorLabel = $('<label>').addClass('error-label').html(text);
+    parent.append(errorLabel);
+    parent.addClass('error');
   }
 
   let result = true;
 
-  const allInputs = form.querySelectorAll('input');
+  const allInputs = $('input', form);
 
-  for (const input of allInputs) {
-    removeError(input) // удаляем ошибку, если она есть
+  allInputs.each(function() {
+    const input = this;
+    removeError(input);
 
-    if (input.dataset.maxLength) { // проверяем, если ли у поля атрибут maxLenght
-      removeError(input)
-      if (input.value.length > input.dataset.maxLength) {
+    if ($(input).data('maxLength')) {
+      removeError(input);
+      if (input.value.length > $(input).data('maxLength')) {
         console.log('Ошибка валидации');
-        createError(input, 'Максимальная длина поля ' + input.dataset.maxLength + ' символов')
-        result = false
+        createError(input, 'Максимальная длина поля ' + $(input).data('maxLength') + ' символов');
+        result = false;
       }
     }
 
-    if (input.dataset.required == 'true') { // проверяем, если ли у поля атрибут required
-  
+    if ($(input).data('required') == true) {
       if (input.value == '') {
-        removeError(input)
+        removeError(input);
         console.log('Ошибка валидации');
         createError(input, 'Поле не должно быть пустым');
         result = false;
       }
     }
-  }
+  });
   return result;
 }
 
-// вешаем обработчик события на форму
-document.getElementById('add-form').addEventListener('submit', function (event) {
-  event.preventDefault()
+$('#add-form').on('submit', function (event) {
+  event.preventDefault();
 
   if (validateForm(this) == true) {
-    alert('Форма отправлена')
+    alert('Форма отправлена');
   }
-}
-)
+});
